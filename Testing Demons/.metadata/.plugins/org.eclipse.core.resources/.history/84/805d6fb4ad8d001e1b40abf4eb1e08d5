@@ -1,0 +1,48 @@
+package locators;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class WishlistLocators {
+	//Declare the web elements using @FindBy annotation
+	
+		@FindBy(xpath="//input[@id='search']")
+		public WebElement search;
+		
+		@FindBy(xpath="(//img[@class='product-image-photo hovered-img'])[1]")
+	    public WebElement image;
+		
+		@FindBy(xpath="(//a[@data-action='add-to-wishlist'])[1]")
+	    public WebElement wishlist;
+			
+		@FindBy(xpath="//a[@class='cdz-dd-trigger cdz-top-link']")
+		public WebElement clickwishlist;
+		
+		@FindBy (xpath="//a[@class='details md-icon-button launch md-ink-ripple']")
+		public WebElement wishview;
+		
+		@FindBy (xpath="//button[@class='action share']")
+		public WebElement sharebutton;
+		
+		@FindBy (xpath="//textarea[@id='email_address']")
+		public WebElement enteremail;
+		
+		@FindBy (xpath="//textarea[@id='message']")
+		public WebElement message;
+		
+		@FindBy (xpath="//button[@class='action submit primary']")
+		public WebElement sharewishlist;
+		
+		@FindBy (xpath="//div[text()='Your wish list has been shared.']")
+		public WebElement wish;
+		
+		@FindBy (xpath="//a[@title='Remove Item']")
+		public WebElement remove;
+
+
+
+
+	
+	
+	
+}

@@ -1,0 +1,32 @@
+package locators;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class SportsShoesLocators {
+	
+
+	
+		
+		//Declare the web elements using @FindBy annotation
+		@FindBy(xpath="(//span[text()='SPORTS SHOES'])[1]")
+		public WebElement sportsshoes;
+		
+		@FindBy (xpath="//a[text()=' Football shoes']")
+		public WebElement football;
+		
+		@FindBy(xpath="//option[text()='Price']")
+		public WebElement price;
+		
+		public String list = "//ol[@class='products list items product-items flex-grid']/li/div/div[2]/div/strong/a";
+		
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

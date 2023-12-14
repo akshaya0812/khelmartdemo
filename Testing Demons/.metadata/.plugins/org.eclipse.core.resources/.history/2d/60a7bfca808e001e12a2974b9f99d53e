@@ -1,0 +1,53 @@
+package stepDefinition;
+
+
+import org.testng.Assert;
+
+import action.MyAccountAction;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import util.HelperClass;
+import util.Utility;
+
+public class MyAccountStepDefinition {
+	
+MyAccountAction act=new MyAccountAction();//create a object for MyAccountAction
+	
+	Utility ut=new Utility();
+	
+
+	@When("user click my account")
+	public void user_click_my_account() throws InterruptedException {
+		
+		act.clickyouraccount();
+		act.clickaccountclick();
+		System.out.println(act.getaccounttext());
+		Assert.assertTrue(act.getaccounttext().contains("ACCOUNT INFORMATION"));//assert is make to verify the myaccount page
+//		
+	}
+
+	@When("user click my orders")
+	public void user_click_my_orders() {
+		act.clickmyorder();
+		Assert.assertTrue(act. getordertext().contains("You have placed no orders."));//assert is made to verify the myorder page
+	    
+	}
+
+	@When("user click address book and update the address")
+	public void user_click_address_book_and_update_the_address() {
+		act.setmyaddressbook();
+		act.setchangeaddress();
+		act.setaddressClear();
+		act.setaddress(ut.ChangeAddress);
+		act.setsaveaddress(); 
+	}
+
+	@Then("user checks the updated address")
+	public void user_checks_the_updated_address() {
+		Assert.assertTrue(act.verifyAddress().contains("You saved the address."));//assert is made after successfully changed the address
+		System.out.println("user checks the updated address");
+		act.setyouraccountsignout();
+		act.setsignout();
+	   
+	}
+}

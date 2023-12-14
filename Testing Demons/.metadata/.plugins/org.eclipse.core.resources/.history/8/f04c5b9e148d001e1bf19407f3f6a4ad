@@ -1,0 +1,14 @@
+package runner;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(tags="",features={"C:\\Users\\apiramanayagam\\Pilot Project\\Khelmart\\src\\test\\resource\\Features"},glue="stepDefinition",plugin="json:target/cucumber-report.json")
+//{"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
+
+public class MyAccountRunner {
+
+}
